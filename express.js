@@ -130,4 +130,11 @@ app.post("/Sindh", (req, res) => {
     .catch(e => res.status(500).send(e));
 });
 
+app.get("/", (req, res) => {
+  res.status(200).send({
+    endpoints: ["/Islamabad", "/Punjab", "/Sindh"],
+    type: "POST"
+  })
+})
+
 module.exports = app;
